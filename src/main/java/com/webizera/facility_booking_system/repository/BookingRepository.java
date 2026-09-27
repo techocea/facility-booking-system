@@ -21,7 +21,7 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
     //overlapping logic check query
     @Query("""
             SELECT count(b) > 0 FROM Booking b
-            WHERE b.facilit_id = :facilityId
+            WHERE b.facility.id = :facilityId
             AND b.status IN :activeStatuses
             AND :startTime < b.endTime
             AND :endTime > b.startTime

@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "facilities")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
