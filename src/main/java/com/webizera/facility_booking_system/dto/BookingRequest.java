@@ -14,10 +14,7 @@ public class BookingRequest {
     @NotNull(message = "User ID is required")
     private Long userId;
 
-    @NotNull(message = "Date is required")
-    private LocalDateTime date;
-
-    private String description;
+//    private String description;
 
     @NotNull(message = "Start time is required")
     @Future(message = "Start time must be in the future")

@@ -9,6 +9,7 @@ import com.webizera.facility_booking_system.model.enums.BookingStatus;
 import com.webizera.facility_booking_system.repository.BookingRepository;
 import com.webizera.facility_booking_system.repository.FacilityRepository;
 import com.webizera.facility_booking_system.repository.UserRepository;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -79,6 +80,14 @@ public class BookingService  {
 
         Booking savedBooking = bookingRepository.save(booking);
         return mapToResponse(savedBooking);
+    }
+
+    @Transactional(readOnly = true)
+    public List<BookingResponse> getBookings(){
+        return bookingRepository.findAll()
+                .stream()
+                .map(this::mapToResponse) //booking -> this.mapToResponse
+                .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)

@@ -29,6 +29,8 @@ public class Payment {
     @Column(nullable = false)
     private PaymentStatus paymentStatus;
 
+    private String transactionId;
+
     private LocalDateTime paidAt;
 
     @OneToOne
