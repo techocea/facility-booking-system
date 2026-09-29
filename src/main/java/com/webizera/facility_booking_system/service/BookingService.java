@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class BookingService  {
+
     private final BookingRepository bookingRepository;
     private final UserRepository userRepository;
     private final FacilityRepository facilityRepository;

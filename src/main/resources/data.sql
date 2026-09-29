@@ -1,6 +1,5 @@
 INSERT INTO users (name,email,password,role,created_at) VALUES
-('Admin User', 'admin@example.com', 'admin123', 'ROLE_ADMIN', CURRENT_TIMESTAMP),
-('John Doe', 'john@example.com', 'user123', 'ROLE_CUSTOMER', CURRENT_TIMESTAMP);
+('Admin User', 'admin@example.com', '$2a$12$ydb4Ly3eo7Xtb3vjQS/ArOzwgn8ARA1nO2sriz8mdRiG/Mn5z4CGW', 'ROLE_ADMIN', CURRENT_TIMESTAMP);
 
 INSERT INTO facility_categories (name) VALUES
     ('Event Space'),
